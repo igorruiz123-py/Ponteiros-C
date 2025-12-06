@@ -14,7 +14,7 @@ void FlushBuffer(){
     while((temp = getchar()) != '\n' && temp != EOF){};
 }
 
-int CheckData(int *x, double *y, char *z){
+int PromptAndCheck(int *x, double *y, char *z){
 
     printf("Enter integer value: ");
     if (scanf(" %d", x) == 0){
@@ -73,7 +73,7 @@ int main(){
         char var;
         char *pVar = &var;
 
-        if (CheckData(pNum, pDnum, pVar)){
+        if (PromptAndCheck(pNum, pDnum, pVar)){
             UpdateValues(pNum, pDnum, pVar);
             break;
         }
