@@ -28,7 +28,7 @@ int PromptAndCheck(int *h, int *m){
     }
 
     printf("Enter number for h less than 60: ");
-    if (scanf(" %d", h) == 0 && *h > 60){
+    if (scanf(" %d", h) == 0 || *h > 60){
         FlushBuffer();
         return 0;
     }
